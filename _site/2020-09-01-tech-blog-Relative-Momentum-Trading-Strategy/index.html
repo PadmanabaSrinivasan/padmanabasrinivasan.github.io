@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2020 -->
+  <head>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Relative (Cross-Sectional) Momentum Trading Strategy</title>
+  
+  
+  <meta name="author" content="Padmanaba Srinivasan">
+  
+  
+  
+  <meta name="description" content="Don't Stop Me Now">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Padmanaba Srinivasan - Computer Science PhD Student" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172123502-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172123502-1');
+</script>
+
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Relative (Cross-Sectional) Momentum Trading Strategy">
+  
+
+   
+  <meta property="og:description" content="Don't Stop Me Now">
+  
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Padmanaba Srinivasan">
+  <meta property="og:article:published_time" content="2020-09-01T00:00:00+01:00">
+  
+
+  
+  <meta property="og:url" content="http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/">
+  <link rel="canonical" href="http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/">
+  
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/assets/img/path.jpg">
+  
+
+
+  <!-- Twitter summary cards -->
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  
+  <meta name="twitter:title" content="Relative (Cross-Sectional) Momentum Trading Strategy">
+  
+
+  
+  <meta name="twitter:description" content="Don't Stop Me Now">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/path.jpg">
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="http://localhost:4000/">Padmanaba Srinivasan</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/cv/CV.pdf">CV/Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/techblog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en">Publications</a>
+          </li></ul>
+  </div>
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="http://localhost:4000/">
+          <img alt="Navbar avatar" class="avatar-img" src="/assets/img/park.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="http://localhost:4000/assets/img/path.jpg"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Relative (Cross-Sectional) Momentum Trading Strategy</h1>
+      
+        
+      <h2 class="post-subheading">Don't Stop Me Now</h2>
+      
+      
+      
+      
+          <span class="post-meta">Posted on 01 September, 2020</span>
+          
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Relative (Cross-Sectional) Momentum Trading Strategy</h1>
+      
+        
+      <h2 class="post-subheading">Don't Stop Me Now</h2>
+      
+      
+      
+      
+          <span class="post-meta">Posted on 01 September, 2020</span>
+          
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container-md">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <p>Another day, another post. This time it’s all about Momentum. Momentum is, as defined in the <a href="https://www.oxfordlearnersdictionaries.com/definition/english/momentum?q=momentum">Oxford English Dictionary</a>:</p>
+
+<ol>
+  <li>
+    <p>The ability to keep increasing or developing</p>
+  </li>
+  <li>
+    <p>A force that is gained by movement</p>
+  </li>
+  <li>
+    <p>(specialist) The quantity of movement of a moving object, measured as its mass multiplied by its speed.</p>
+  </li>
+</ol>
+
+<p>Anyone who has taken a beginner/intermediate level Physics class in school is likely intimately familiar with momentum as a concept – <em>something to do with how fast an object is going and how much it weighs</em>. Perhaps the most important takeaway from that class is the idea that we can use momentum to decide what the aftermath of a collision is likely to look like (see <a href="https://en.wikipedia.org/wiki/Conservation_of_momentum">Conservation of Momentum</a>). On a more intuitive level, you may remember this: stopping a heavy, moving vehicle is difficult!</p>
+
+<p>We extend this idea to equity prices; if a stock has been performing well, then it is likely to perform well in the future, and conversely, underperforming stocks are likely to underperform in the future. <a href="http://www.bauer.uh.edu/rsusmel/phd/jegadeesh-titman93.pdf">Jegadeesh and Titman</a> developed the foundation for momentum-based strategies, which, contrary to the prevailing theory of mean-reversion, argued that trends persist and developed the Relative Momentum (RV) strategy. Note that Relative Momentum is also called Cross-Sectional Momentum.</p>
+
+<h3 id="the-intuition">The Intuition</h3>
+
+<p>In a nutshell, in a world with <em>n</em> securities, Relative Momentum works as follows every time we want to rebalance the portfolio:</p>
+
+<ol>
+  <li>
+    <p>Calculate returns for the past <em>k</em> months for each stock</p>
+  </li>
+  <li>
+    <p>Sort the stocks into then decile equally weighted portfolios.</p>
+  </li>
+  <li>
+    <p>At rebalance time, go long on the top-performing <em>m</em> portfolios and short the <em>m</em> worst performing portfolios, making sure to close any previous positions taken at the last rebalance time.</p>
+  </li>
+</ol>
+
+<p>Straying a little from Jegadeesh and Titman’s approach, we are going to sort the stocks based on past <em>k</em> month returns, and not into decile equally weighted portfolios.</p>
+
+<h3 id="obtaining-data">Obtaining Data</h3>
+
+<p>To obtain data, we defer to <a href="https://pandas-datareader.readthedocs.io/en/latest/">pandas-datareader</a> using which we download data from 2015 to the present for stocks in the S&amp;P 500, using Yahoo Finance as the data source. We follow this up by removing any tickers with missing data for these dates.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>    <span class="n">start</span> <span class="o">=</span> <span class="n">dt</span><span class="p">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">dt</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pdr</span><span class="p">.</span><span class="n">DataReader</span><span class="p">(</span><span class="n">tickers</span><span class="p">,</span> <span class="n">data_source</span><span class="o">=</span><span class="s">"yahoo"</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>We can then look at some of the prices for these over time. We will use the Adjusted Close prices for the remainder of this post.</p>
+
+<p class="mx-auto d-block"><img src="/assets/blog/tech_blog/2020-09-01-tech_blog-Relative-Momentum-Trading-Strategy/prices_over_time.png" alt="Stock prices over time" />
+<em>Stock prices over time</em></p>
+
+<h3 id="implementing-relative-momentum">Implementing Relative Momentum</h3>
+
+<p>The crux of the Relative Momentum trading strategy is to use returns for the last <em>k</em> days as the momentum. We can calculate the returns for every period as follows:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>    <span class="n">adj_close</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">"Adj Close"</span><span class="p">]</span>
+    <span class="n">pct_changes</span> <span class="o">=</span> <span class="n">adj_close</span><span class="p">.</span><span class="n">pct_change</span><span class="p">(</span><span class="n">momentum_period</span><span class="p">).</span><span class="n">dropna</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>We also need to know which the rank of each stock at every stage. To do this, we initialise a new Dataframe and fill it with the ranks. We remember to shift this forward by one day because at rebalance time, we only have information up till the previous day.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>    <span class="n">df_ranks</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">pct_changes</span><span class="p">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pct_changes</span><span class="p">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pct_changes</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="n">rebalance_freq</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">df_ranks</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">pct_changes</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">rank</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="n">df_ranks</span> <span class="o">=</span> <span class="n">df_ranks</span><span class="p">.</span><span class="n">shift</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">df_ranks</span><span class="p">.</span><span class="n">ffill</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>With the machinery in place, we can go ahead and simulate some trades!</p>
+
+<p>We are left to choose how many stocks we take a long position on and how many we short at each rebalance time. We begin with a balanced 20 long, 20 short.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre>    <span class="n">num_long</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">num_short</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">num_stocks</span> <span class="o">=</span> <span class="n">df_ranks</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">num_short</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_ranks</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="c1"># If a stock is ranked within the top num_long, we take a long position
+</span>    <span class="n">df_ranks</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_ranks</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">num_long</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># If a stock is ranked in the bottom num_short, we short it
+</span>    <span class="n">df_ranks</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_ranks</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">num_stocks</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="c1"># Otherwise do nothing
+</span>    <span class="n">df_ranks</span><span class="p">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_ranks</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">num_stocks</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_ranks</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">num_long</span><span class="p">),</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>To view how well the strategy has performed we also need to calculate how our money changes in value over time.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>    <span class="n">res_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">adj_close</span><span class="p">.</span><span class="n">pct_change</span><span class="p">())</span> <span class="o">*</span> <span class="n">df_ranks</span>
+    <span class="n">res_df</span><span class="p">[</span><span class="s">'Total Return'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">res_df</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">num_long</span> <span class="o">+</span> <span class="n">num_short</span><span class="p">)</span>
+    <span class="n">res_df</span> <span class="o">=</span> <span class="n">res_df</span><span class="p">[</span><span class="n">momentum_period</span><span class="p">:]</span>
+    <span class="n">res_df</span><span class="p">[</span><span class="s">'Portfolio Value'</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">mult_df</span><span class="p">[</span><span class="s">'Total Return'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="n">cumprod</span><span class="p">())</span> <span class="o">*</span> <span class="mi">1</span>
+
+    <span class="n">res_df</span><span class="p">[</span><span class="s">'Portfolio Value'</span><span class="p">].</span><span class="n">plot</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s">'Portfolio Value, momentum_prediod=</span><span class="si">{</span><span class="n">momentum_period</span><span class="si">}</span><span class="s">, rebalance_freq=</span><span class="si">{</span><span class="n">rebalance_freq</span><span class="si">}</span><span class="s">, num_long=</span><span class="si">{</span><span class="n">num_long</span><span class="si">}</span><span class="s">, num_short=</span><span class="si">{</span><span class="n">num_short</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>So how does our strategy perform?</p>
+
+<p class="mx-auto d-block"><img src="/assets/blog/tech_blog/2020-09-01-tech_blog-Relative-Momentum-Trading-Strategy/strat_1.png" alt="Strategy 1 Results" /></p>
+
+<h3 id="varying-the-strategy">Varying the strategy</h3>
+
+<p>This trading strategy affords us a lot of freedom to change the parameters. We can change the rebalance frequency, the momentum period or the number of stock we take long or short positions on.</p>
+
+<p>So, let’s explore what happens when all we do is taking long positions.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>    <span class="n">num_long</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">num_short</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p class="mx-auto d-block"><img src="/assets/blog/tech_blog/2020-09-01-tech_blog-Relative-Momentum-Trading-Strategy/strat_2.png" alt="Strategy 2 Results" /></p>
+
+<p>It turns out that this strategy seems successful – at least we are now making money – but the average annual return is approximately 16.4%. This is respectable, but a far cry from being a successful trading strategy. On closer inspection, we see that the strategy returns less than 4% for the first two years. This means that for this period, you would be better off investing in an index fund; the <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjC2qje3sPrAhWIi1wKHWhTB4kQFjACegQIDBAI&amp;url=https%3A%2F%2Fwww.investopedia.com%2Fask%2Fanswers%2F042415%2Fwhat-average-annual-return-sp-500.asp&amp;usg=AOvVaw1Ga1bxvnnz8NT-KrfN6LfC">S&amp;P 500 has averaged an annual return of 10% through till 2019</a>. We also have to bear in mind that the real return is likely to be lower as we haven’t accounted for the cost of trading yet, and passive funds have very low Annual Management Charges.</p>
+
+<p>We next turn to shorting, and see how a pure shorting strategy performs.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>    <span class="n">num_long</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">num_short</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p class="mx-auto d-block"><img src="/assets/blog/tech_blog/2020-09-01-tech_blog-Relative-Momentum-Trading-Strategy/strat_3.png" alt="Strategy 3 Results" /></p>
+
+<p>The shorting strategy performs spectacularly poorly losing nearly 80% of the portfolio value over the five years. However, shorting typically aims to exploit recent and short term drops in stock prices (see <a href="https://www.investopedia.com/terms/s/shortselling.asp">this</a> for a description of shorting) and our use of a 120 day momentum period may be causing this strategy to backfire. We adjust the momentum period and rebalance frequency and repeat this strategy.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>    <span class="n">momentum_period</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">rebalance_freq</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p class="mx-auto d-block"><img src="/assets/blog/tech_blog/2020-09-01-tech_blog-Relative-Momentum-Trading-Strategy/strat_4.png" alt="Strategy 4 Results" /></p>
+
+<p>As before we see a circa 80% decline in portfolio value. The most interesting part, however, is the spike in value in early 2020. This corresponds to the market crash due to Coronavirus and highlights the use of a shorting strategy in a bear market.</p>
+
+<p>Finally, we also want to see how a simple buy and hold strategy compares with Relative Momentum. We build an equally weighted portfolio of each of these stocks and see a return of 100.79%! Now, saying that Relative Momentum is useless is a blanket statement – it has its uses in a carefully analysed environment with appropriate variables but it certainly isn’t the kind of strategy you want to leave running in the long term.</p>
+
+<h3 id="wrapping-up">Wrapping up</h3>
+
+<p>We have merely explored a clean, academic implementation of the Relative Momentum strategy. A true trading environment would have far more sophisticated back-testing and robust code, but this serves the purpose of exploring the strategy and understanding why it works (or doesn’t work). For an insight into what a momentum strategy looks like in a production environment, head over to one of the many algorithmic trading platforms with far more software engineer-y implementations.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#tech">tech</a>
+          
+            <a href="/tags#quantitative finance">quantitative finance</a>
+          
+            <a href="/tags#trading strategies">trading strategies</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+    <a href="https://twitter.com/intent/tweet?text=Relative+%28Cross-Sectional%29+Momentum+Trading+Strategy&url=http%3A%2F%2Flocalhost%3A4000%2F2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy%2F"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fab fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/" data-toggle="tooltip" data-placement="top" title="Starting out with Gaussian Processes">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/" data-toggle="tooltip" data-placement="top" title="Mathematical Investing 1 - Meandering with Markowitz">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+              
+  
+  
+  
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:padmanaba.srinivasan16@imperial.ac.uk" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/dangerbot3pic" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/padmanaba-srinivasan-b67bb1137" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Padmanaba Srinivasan
+        &nbsp;&bull;&nbsp;
+      
+      2024
+
+      
+
+      
+      </p>
+      <!-- Please don't remove this, keep my open source work credited :) -->
+      <p class="theme-by text-muted">
+        Theme by
+        <a href="https://beautifuljekyll.com">beautiful-jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+  
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/main.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  </body>
+</html>

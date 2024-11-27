@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2020 -->
+  <head>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>A Summary of Action Recognition So Far</title>
+  
+  
+  <meta name="author" content="Padmanaba Srinivasan">
+  
+  
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Padmanaba Srinivasan - Computer Science PhD Student" href="http://localhost:4000/feed.xml">
+
+  
+
+  
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172123502-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172123502-1');
+</script>
+
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/main.css">
+    
+  
+
+  
+
+  
+
+  <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="A Summary of Action Recognition So Far">
+  
+
+   
+  <meta property="og:description" content="This will be a post that is updated as I read and learn more about this topic. It is intended as a space where I can write and summarise what I think is the key material I’ve come across. Action recognition is a huge field and this page alone is...">
+  
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="Padmanaba Srinivasan">
+  <meta property="og:article:published_time" content="2021-06-16T00:00:00+01:00">
+  
+
+  
+  <meta property="og:url" content="http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">
+  <link rel="canonical" href="http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">
+  
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/assets/img/path.jpg">
+  
+
+
+  <!-- Twitter summary cards -->
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  
+  <meta name="twitter:title" content="A Summary of Action Recognition So Far">
+  
+
+  
+  <meta name="twitter:description" content="This will be a post that is updated as I read and learn more about this topic. It is intended as a space where I can write and summarise what I think is the key material I’ve come across. Action recognition is a huge field and this page alone is...">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/path.jpg">
+  
+
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="http://localhost:4000/">Padmanaba Srinivasan</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/cv/CV.pdf">CV/Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/techblog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en">Publications</a>
+          </li></ul>
+  </div>
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="http://localhost:4000/">
+          <img alt="Navbar avatar" class="avatar-img" src="/assets/img/park.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+      
+      data-img-src-1="http://localhost:4000/assets/img/path.jpg"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>A Summary of Action Recognition So Far</h1>
+      
+      
+      
+          <span class="post-meta">Posted on 16 June, 2021</span>
+          
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>A Summary of Action Recognition So Far</h1>
+      
+      
+      
+          <span class="post-meta">Posted on 16 June, 2021</span>
+          
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container-md">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <p><em>This will be a post that is updated as I read and learn more about this topic. It is intended as a space where I can write and summarise what I think is the key material I’ve come across. Action recognition is a huge field and this page alone is most certainly not be enough to encompass everything in the field. For a detailed survey of the deep learning architectures or datasets refer to <a href="https://arxiv.org/abs/2012.06567">Zhu et al.</a> and <a href="https://arxiv.org/abs/2010.06647">Hutchinson et al.</a>.</em></p>
+
+<p align="center"><iframe src="https://giphy.com/embed/d91znKMfav9mre2TlC" width="480" height="270" frameborder="0" class="giphy-embed"></iframe><p><a>Source: GIPHY</a></p></p>
+
+<p>Part of my PhD research involves figuring out how we can recognise what kind of shot is played by a tennis player in a broadcast match setting. This post will focus on action recognition as a whole with a few sections <strong><em>that look like this</em></strong> to address tennis-specific knowledge. I would also like to draw a distinction between action recognition and action classification – in this post, both terms will be used interchangeably, however, in practice <em>classification</em> is the identification of which action is occurring, whereas <em>recognition</em> is the identification of whether an action is occurring and which one it is.</p>
+
+<p>For us humans, action recognition is pretty intuitive: we have typically seen an action performed before and can learn the broad outline of the action which we can then extend to variations of the same. More formally, in human action recognition, we can identify the various kinetic states of a person over a time period and piece these together into a chain that constitutes an action. Even more impressively, we are able to do this even when the background is cluttered, when the subject is partially occluded or even when there is a change in scale, lighting, appearance or spatial resolution. Further compounding the problem is the idea that actions are not restricted to individual people – actions often involve interacting with objects or other people or objects.</p>
+
+<p>Then there’s the matter of data. Early work on action recognition focussed on using RGB or grayscale videos due to their availability. More recent work has used a variety of other data, as summarised by <a href="https://arxiv.org/abs/2012.11866">Sun et al.</a> to include skeleton, depth, infrared sequence, point cloud and several more types. <a href="https://arxiv.org/abs/2012.11866">Sun et al.</a> summarise the various sources of data in a table.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/data_modalities_summary.png" alt="A summary of data modalities in action recognition" class="mx-auto d-block" /> <em>A summary of data modalities in action recognition. Source: <a href="https://arxiv.org/abs/2012.11866">Sun et al.</a></em></p>
+
+<p>Broadcast tennis matches consist of only monocular RGB video so we consider action recognition using RGB video for now.</p>
+
+<hr />
+
+<h2 id="rgbgrayscale-action-recognition">RGB/grayscale Action Recognition</h2>
+
+<p>RGB video refers to video (sequences of RGB frames) captured via RGB cameras which aim to capture the colour information that a person would see. Cameras that capture in grayscale too exist, but are increasingly rare and grayscale video can often be obtained from RGB video by the colourspace conversion:</p>
+
+\[\begin{align}
+ \text{Grayscale} = \frac{(R + G + B)}{3}
+ \end{align}\]
+
+<p>Note that other colour spaces exist, such as Hue Saturation Value (HSV) among others. These colour spaces are merely different ways of describing the colours in a frame and some are more suited to some tasks than others. HSV, for example, is preferred for colour based image segmentation.</p>
+
+<h3 id="pre-deep-learning">Pre-deep learning</h3>
+
+<p>Before the explosion of deep learning in computer vision, handcrafted feature-based approaches were used. The most performant of these are the spatiotemporal volume based methods which attempt to capture motion descriptors in space as well as time. Examples of these features include <a href="https://ieeexplore.ieee.org/document/1467360">Histogram of Oriented Gradients (HOG)</a> which is a classic image classification feature that was extended to the temporal dimension to make a <a href="https://lear.inrialpes.fr/people/klaeser/research_hog3d">HOG3D descriptor</a>. The HOG3D descriptor forms a class of descriptor that focuses on providing a spatiotemporal ‘view’ of an action, along with <a href="https://ieeexplore.ieee.org/document/1570899">Cuboids</a> and <a href="http://vision.eecs.yorku.ca/publications/pami2013DerpanisSizintsevCannonsWildes.pdf">Spatiotemporal Orientation Analysis</a>. Another class of descriptors focus on capturing and encoding motion information such as <a href="https://link.springer.com/chapter/10.1007/11744047_33">Motion Boundary Histograms</a> and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865510001121]">Histogram of Optical Flow</a>. These features must be extracted from a video before a model such as an <a href="https://en.wikipedia.org/wiki/Support-vector_machine">SVM</a> is trained to classify them into actions.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/hog3d_descriptor.png" alt="An overview of the HOG3D descriptor" class="mx-auto d-block" /> <em>An overview of the HOG3D descriptor. Source: <a href="https://lear.inrialpes.fr/people/klaeser/research_hog3d">Klaser et al.</a></em></p>
+
+<p><strong><em>I have experimented with extracting handcrafted features from broadcast tennis video for a classification problem, cropping around the tennis player of interest when they perform the action and using an SVM model to classify the action (a binary classification problem). I found that there was significant error as cropping around the player brought in a complex and changing background as the player was often moving, or the camera was moving (camera pan movement), or both. Background subtraction was infeasible and its’ use failed to remove features such as court lines, the net, or the line judges remaining which had a significant impact on the performance of this model. Using optical flow was problematic as, due to the view of the court from one end, the far player’s movement is often ‘suppressed’ compared to the near player and combined with the change in view from one court to another, resulting in very different looking flows for similar patterns of motion. Performance was so poor that this was not a technique that could be taken forward. On the plus side, this is also a perfect justification for using deep learning for action recognition.</em></strong></p>
+
+<p><strong><em>An example where handcrafted features were used in combination with an SVM for tennis swing classification can be found <a href="https://ieeexplore.ieee.org/document/1698880">here</a> where the authors use Histogram of Optical Flow between frames and take a majority vote for a sequence of these features that make up an action in classifying left and right swings, achieving impressive results.</em></strong></p>
+
+<p>Classifiers trained on handcrafted features have achieved impressive results in the past. However, the main drawback of such models is that their ability to generalise is limited by the features extracted and since the features extracted are designed by humans, they can often be a limiting factor.</p>
+
+<h3 id="the-deep-learning-era">The deep learning era</h3>
+
+<p>Deep learning models, a fancy word for large and many-layered artificial neural networks, have seen significant success in computer vision. In the field of action recognition, deep learning has enabled us to forgo the extraction of handcrafted features and provide raw frames to models directly whereby the model learns to extract features it needs. This is facilitated by several convolutional layers which extract increasingly higher level features through the network. The ability for a model to independently learn which features are useful and how to extract them is extremely powerful and in image classification, deep neural networks have been shown to outperform other state of the art methods and we so we hope that deep learning can provide a tool to solve our problem of action recognition. However, among several drawbacks of deep learning, two are that deep models typically require a <strong>lot</strong> of data and that they are black-boxes – it can be difficult to fully understand how and why a model made a decision. In computer vision, some techniques to help understand the model more typically come in the form of visualising filters (which becomes more difficult with 3D convolutional filters) and dimensionality reduction techniques such as <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a> or <a href="https://arxiv.org/abs/1802.03426">UMAP</a>.</p>
+
+<p>We can categorise the different kinds of models applied used for action recognition into one of three:</p>
+
+<ol>
+  <li>2D convolutional networks</li>
+  <li>2D convolutional + RNN networks</li>
+  <li>3D convolutional networks</li>
+</ol>
+
+<p>Bear in mind that this is a very broad categorisation and in practice, models can use architectural aspects of other categories. We will run through each of these designs in order.</p>
+
+<hr />
+
+<h4 id="2d-convolutional-networks">2D convolutional networks</h4>
+
+<p>2D CNNs are some of the earliest models that successfully tackled the problem of action recognition. <a href="https://arxiv.org/abs/1406.2199">Simonyan et al.</a> and <a href="https://ieeexplore.ieee.org/document/6909619">Karpathy et al.</a> both introduced the idea of two-stream convolutional neural networks in 2014, that used 2D convolution in both streams to classify actions, albeit in different ways.</p>
+
+<h4 id="simonyan-et-al">Simonyan et al.</h4>
+
+<p><a href="https://arxiv.org/abs/1406.2199">Simonyan et al.</a> design a network that considers both a static RGB image in one stream to provide spatial information on what action is happening, as well as another stream that considers pre-calculated motion features.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/simonyan_two_stream_net.png" alt="Two stream architecture for action recognition, Simonyan et al." class="mx-auto d-block" /> <em>Simonyan et al. two stream architecture. Source: <a href="https://arxiv.org/abs/1406.2199">Simonyan et al.</a></em></p>
+
+<p>This paper argues that the upper stream that takes in a single RGB (3 channel) frame of spatial resolution \(w \times h\) alone is sufficient to describe the context of the activity occurring and that all that is necessary for the lower stream is a description of motion for which the authors calculate motion descriptors for \(L\) consecutive frames, where the descriptor between each frame consists of two channels describing motion in the \(x\) and \(y\) directions: \(d_t = \{d_t^x, d_t^y\}\) where \(d_t\) is the descriptor between the raw frames at time \(t\) and \(t+1\). This means \(2L\) frames are produced overall, which are stacked and passed to the lower stream which has the same spatial resolution as the static image stream of \(w \times h\) but now takes \(2L\) channels.</p>
+
+<p>The authors experiment with different types of motion descriptor, experimenting with <a href="https://en.wikipedia.org/wiki/Optical_flow">dense optical flow</a>, <a href="https://ieeexplore.ieee.org/document/5995407">trajectories</a> and different schemas for applying these to include unidirectional flow (ie. flow in the temporal order of the frames) and bidirectional flow (consisting of computing \(L/2\) forward flows from a time \(t\) and \(L/2\) backward flows). The outputs of each stream of this network are fused using late fusion where class scores are averaged or an SVM is trained to further classify based on stream outputs.</p>
+
+<h4 id="karpathy-et-al">Karpathy et al.</h4>
+
+<p><a href="https://ieeexplore.ieee.org/document/6909619">Karpathy et al.</a> too designed a two-stream network, but propose using a <em>fovea</em> stream and a <em>context</em> stream.</p>
+
+<p>The <em>fovea</em> stream takes multiple frames where each input frame is a centre crop of the original frame and the <em>context</em> stream takes in multiple frames that are not cropped but downsampled to a lower spatial resolution. The intuition behind this is to reduce the spatial resolution while also making use of the fact that the interesting action is generally centred in the frame for the <em>fovea</em> while also including wider frame context at a lower resolution.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/karpathy_two_steam_net.png" alt="Two stream architecture for action recognition, Karpathy et al." class="mx-auto d-block" /> <em>Karpathy et al. two stream architecture. Source: <a href="https://ieeexplore.ieee.org/document/6909619">Karpathy et al.</a></em></p>
+
+<p>Perhaps most importantly, Karpathy et al. explore various methods of performing 2D convolutions on multiple frames – an idea they call Time Information Fusion – which aims to preserve temporal relationships between frames without explicitly performing temporal convolutions or use RNNs.</p>
+
+<p><a href="https://ieeexplore.ieee.org/document/6909619">Karpathy et al.</a>, together with <a href="https://arxiv.org/abs/1406.2199">Simonyan et al.</a>, form the basis of a whole class of action recognition architectures that use 2D convolution and two streams. There are too many such models to list here, but we will go on to see just a few of the ones I think are most significant.</p>
+
+<h3 id="feichtenhofer-et-al-2016">Feichtenhofer et al. (2016)</h3>
+
+<p>The previous two models, despite being two-stream models, have been separable. Each stream makes a prediction which is typically combined using an averaging mechanism or a linear model. In their 2016 paper, <a href="https://arxiv.org/abs/1604.06573">Feichtenhofer et al.</a> explore different fusion techniques to better combine the spatial and temporal streams of a two-stream network.</p>
+
+<p>Feichtenhofer et al. (2016) consider two kinds of fusion:</p>
+<ol>
+  <li>Spatial fusion – to better relate the spatial information from the spatial stream to the motion information in the temporal stream.</li>
+  <li>Temporal fusion – to combine the outputs of both the streams, which may have spatial fusion already applied</li>
+</ol>
+
+<p>The authors use a base architecture similar to <a href="https://arxiv.org/abs/1406.2199">Simonyan et al.</a>, with \(L=10\) horizontal and vertical optical flow frames (making a total of \(2L\) frames) fed into the temporal stream and a standard RGB frame fed into the spatial stream. Each layer generates its own prediction which is then softmaxed and averaged to generate a combined prediction. Each stream is based on a ResNet architecture, pretrained on ImageNet.</p>
+
+<h4 id="spatial-fusion">Spatial fusion</h4>
+
+<p>The aim of spatial fusion is, to paraphrase the authors, to combine feature maps from the two streams at particular convolutional layers such that the channel responses of the two feature maps can interact in a (hopefully) informative way. The spatial size of two channels is easily matched, but since each layer can also have different numbers of channels, the question of how channels are allowed to interact must be answered.</p>
+
+<p>Spatial fusion occurs by combing feature maps with the same spatial dimension via one of several types of interaction to include: sum fusion, max fusion, concatenation fusion, conv fusion and bilinear fusion.</p>
+
+<p>The authors also consider <em>where</em> to fuse the networks; they consider an early fusion schema following which there is a single network to perform further convolution, as well as multiple fusion points where fusion occurs but both networks maintain their distinct streams.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/feichtenhofer_2016_fusion_regions.png" alt="Where to spatially fuse two stream architectures, Feichtenhofer et al. (2016)" class="mx-auto d-block" /> <em>Where to spatially fuse two stream architectures. Source: <a href="https://arxiv.org/abs/1604.06573">Feichtenhofer et al. (2016)</a></em></p>
+
+<h4 id="temporal-fusion">Temporal fusion</h4>
+
+<p>The standard two-stream network is fed information in a time period of \(t\pm\frac{L}{2}\) (which has total length \(L\)). However, many actions may in fact only make sense over a longer period of time. Of course, we may capture a larger frame window by, for example, considering every second frame. This, however, may well affect the computation of optical flow by violating the small motion assumption. An alternative is to consider un-strided frames over a time \(t+T\tau\) from which windows of length \(L\) are extracted and fed to the network. The feature maps generated by the inference of each window must then be fused temporally to generate a final prediction.</p>
+
+<p>The authors propose two methods of temporal fusion:</p>
+<ol>
+  <li>3D max-pooling – this is an extension of 2D max pooling</li>
+  <li>3D conv + 3D max-pooling – this applies a 3D conv layer before the pooling</li>
+</ol>
+
+<p>The authors go on to perform very in-depth experiments of the fusion strategies they propose. These results are better viewed directly in paper, if at least to save having the define and explain a range of variations of architectures.</p>
+
+<h3 id="feichtenhofer-et-al-2017">Feichtenhofer et al. (2017)</h3>
+
+<p>In 2017, <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Feichtenhofer_Spatiotemporal_Multiplier_Networks_CVPR_2017_paper.pdf">Feichtenhofer et al.</a> came out with another key paper, one that explored how to share information between the two streams without explicit fusion.</p>
+
+<p>The authors propose cross-stream connections – imagine residual connections as in ResNet blocks, but between streams – to allow motion information to interact directly with spatial information. They consider two ways of facilitating interactions through addition and through multiplication (Hadamard product), as well as the direction of interaction to include unidirectional interaction from the temporal to the spatial stream and vice versa, as well as bidirectional interaction. They experiment with five variations of interaction</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/feichtenhofer_2017_types_of_interaction.png" alt="Interaction variations, Feichtenhofer et al. (2017)" class="mx-auto d-block" /> <em>Interaction variations. Source: <a href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Feichtenhofer_Spatiotemporal_Multiplier_Networks_CVPR_2017_paper.pdf">Feichtenhofer et al. (2017)</a></em></p>
+
+<p>The authors also propose a means to learn more powerful temporal features with the use of 1D convolutions in the temporal domain (rather than RNNs). The paper proceeds to experiment with various combinations of the proposed parameters and finds that unidirectional connections from the motion stream to the spatial stream using multiplication yields a significant reduction in error.</p>
+
+<h3 id="wang-et-al">Wang et al.</h3>
+
+<p>In 2016, <a href="https://arxiv.org/abs/1608.00859">Wang et al.</a> attempted to solve the problem of long-range dependencies; most action recognition models tend to focus on short term motion and do not provide a framework to capture long term dependencies of actions that occur over a long period of time. The authors use a two-stream approach following Simonyan et al. but develop a method to classify actions over a period longer than one clip. They call their model a Temporal Segment Network (TSN) where one input video is divided into several short sections from which a snippet of frames is selected and passed through a two-stream ConvNet. Predictions for several of these snippets are then fused to generate an overall prediction for one final prediction.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/wang_tsn.png" alt="Temporal Segment Network, Want et al." class="mx-auto d-block" /> <em>Temporal Segment Network. Source: <a href="https://arxiv.org/abs/1608.00859">Wang et al.</a></em></p>
+
+<p>The authors achieved (at the time) state of the art performance on UCF101 and HMDB51 and their approach is interesting for recognising there is a need to model long term dependencies and for providing an approach to do so.</p>
+
+<hr />
+
+<h4 id="2d-convolutional-network--rnn">2D convolutional network + RNN</h4>
+
+<p>The second class of architecture we consider are a combination of standard CNNs that employ a 2D convolutional architecture, followed by one or more RNN layers.</p>
+
+<p>Early work in developing this class of model goes back to 2015, where papers by <a href="https://arxiv.org/abs/1503.08909">Ng et al.</a> and <a href="https://arxiv.org/abs/1411.4389">Donahue et al.</a>.</p>
+
+<p><a href="https://arxiv.org/abs/1503.08909">Ng et al.</a> consider raw frames (or optical flow frames) which are passed through GoogLeNet, generating a 4096 dimension feature vector for each frame. Feature vectors corresponding to each frame in a video are then either pooled or passed through an LSTM before a Softmax classifier is applied to generate a prediction. The researchers show that using LSTMs to model temporal information yields more performance than (convolutional) pooling.</p>
+
+<p><a href="https://arxiv.org/abs/1411.4389">Donahue et al.</a> develop the classic CNN+LSTM model consisting of a standard 2D CNN whose features are fed into an LSTM. Several frames are fed into a model and the final prediction of the LSTM is considered the overall prediction of the model.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/donahue_2015_cnn_lstm.png" alt="CNN+LSTM model, Donahue et al." class="mx-auto d-block" /> <em>CNN+LSTM model. Source: <a href="https://arxiv.org/abs/1411.4389">Donahue et al.</a></em></p>
+
+<p>Donahue et al. consider several sub-tasks of activity recognition, image captioning and video description. For action recognition, they use an AlexNet-variant CNN along with a single layer LSTM and consider both RGB frames as well as optical flow frames as inputs. The CNN+LSTM architecture shows significant improvement over a standard single frame architecture, with optical flow-fed models outperforming RGB-fed networks. For the image captioning task, Donahue et al. also consider a two-layer LSTM and find little to no improvement in performance, concluding that additional LSTM layers do not benefit the image captioning task.</p>
+
+<p>In 2016, <a href="https://arxiv.org/abs/1511.04119">Sharma et al.</a> developed an extension to the standard CNN+LSTM model with the intuition that, when assessing a scene, humans focus on certain aspects of a scene at a time. This suggests that an attention mechanism may provide some benefit and so they introduce a soft attention mechanism into the model. At each time step, the CNN generates \(D\) feature map of dimension \(K \times K\) which are extracted as \(K^2\) \(D\)-dimensional vectors, each of which is passed to the LSTM layers. Each vector in the \(D\)-dimension represents different high levels features in a \(K \times K\) spatial region (this is not the input shape of the original image) and with attention, the aim is to calculate a softmax over the spatial region for each vector. Using <a href="https://arxiv.org/pdf/1409.0473.pdf">Bahdanau Attention</a>, the authors use the hidden state of the LSTM cell, \(\boldsymbol{h}_t\), to compute the softmax over \(K \times K\) regions at time \(t\):</p>
+
+\[l_{t,i} = \frac{exp(W_i^T \boldsymbol{h}_t)}{\sum_{j=1}^{K \times K}{exp(W_j^T \boldsymbol{h}_t)}}\]
+
+<p>Which we interpret to be the importance (distribution) over the \(K \times K\) regions. The importance is then multiplied with the feature output of the CNN, \(\boldsymbol{X}_t\) to produce the attention weighted output \(\boldsymbol{x}_t\):</p>
+
+\[\boldsymbol{x}_t = \sum_{i=1}^{K \times K}{l_{t, i} \boldsymbol{X}_{t,i}}\]
+
+<p>\(\boldsymbol{x}_t\) is then passed on to the three-layer LSTM network.</p>
+
+<p><strong><em>In the realm of action recognition in tennis, this style of model has been most prevalent. I first saw this kind of model used in a 2017 paper by <a href="https://ieeexplore.ieee.org/document/8014761">Mora et al.</a> where they use Inception as the CNN followed by a three-layer LSTM. The authors use the <a href="http://thetis.image.ece.ntua.gr">THETIS dataset</a> which contains labelled videos of people performing twelve tennis shots, albeit in a non-court environment. Vinyes et al. achieve impressive results across the classes, especially considering the similarity of some of the strokes (such as slice and topspin serves).</em></strong></p>
+
+<p><strong><em><a href="https://arxiv.org/abs/1808.00845">Cai et al.</a> build on this approach, using a variation of the standard LSTM (they call this variation a historical LSTM) that adds one state, the historical state \(l_t\) at time \(t\), which is formulated based on relative values of the loss at hidden state, \(\epsilon_{h_t}\) and the loss at the historical state \(\epsilon_{l_{t-1}}\). If \(\epsilon_{h_t} &gt; \epsilon_{l_{t-1}}\), then \(l_t\) is a combination of the previous historical state \(l_{t-1}\) and the current hidden state, \(h_t\), weighted by a learnt parameter \(\alpha_t\). Otherwise, if \(\epsilon_{h_t} &lt; \epsilon_{l_{t-1}}\), then \(l_t\), then \(l_t\) is a weighted average of all past hidden states. In the latter case, a parameter, \(\tau\), controls the weight applied to the samples such that small \(\tau\) places an emphasis on more recent samples and vice-versa for large \(\tau\). The authors evaluate their historical LSTM with different values of \(\tau\), along with a standard LSTM and show the historical LSTM outperforming the standard LSTM. Performance is higher for smaller values of \(\tau\) suggesting that initialising \(l_t\) using more recent hidden states to update the historical state is beneficial(?).</em></strong></p>
+
+<p><strong><em><a href="http://cs230.stanford.edu/projects_winter_2020/reports/32209028.pdf">Buddhiraju et al.</a> perform classification on the same dataset using: 1. a variation of the CNN+LSTM model that replaced the LSTM with a bidirectional LSTM; and 2. an architecture found via architecture search using EvaNet, achieving near identical performance with both models on a reduced, six class problem.</em></strong></p>
+
+<p><strong><em><a href="https://ieeexplore.ieee.org/document/8227494">Faulkner et al.</a> perform work similar to <a href="https://arxiv.org/abs/1411.4389">Donahue et al.</a> with a tennis-specific focus, attempting to recognise and events in tennis and then segment them, as well as generate commentary on the event. They evaluate several different architectures such as a CNN+LSTM model, full 3D conv models as well as two-stream architectures and find, for segmentation that two-stream models and CNN+LSTM models perform better. Their work only touches on action classification, preferring to detect serves or hits in one of four regions on screen, but is an interesting read.</em></strong></p>
+
+<hr />
+
+<h4 id="3d-convolutional-networks">3D convolutional networks</h4>
+
+<p>3D ConvNets see their origin in a 2012 paper called <a href="https://www.dbs.ifi.lmu.de/~yu_k/icml2010_3dcnn.pdf">3D Convolutional Neural Networks for Human Action Recognition</a>. 3D convolution is a straightforward extension of standard 2D convolution. In 2D convolution, the value at a position \(x, y\) in the \(j\)-th feature map in the \(i\)-th layer is given by \(v^{x, y}_{i, j}\):</p>
+
+\[v^{x,y}_{i, j} = \sum_{p=0}^{P_i -1} \sum_{q=0}^{Q_i -1} w_{ij}^{pq} v_{(i-1)}^{(x+p)(y+q)}\]
+
+<p>where \(P_i, Q_i\) are the convolution kernel height and width, respectively, and after which a bias and/or activation can be applied. 2D conv is just a weighted sum of a particular value and its immediate neighbours in the x-y plane. 3D conv takes this a step further adding another dimension in the z-plane. So, a value at the location \(x, y, z\) is now given by:</p>
+
+\[v^{x,y,z}_{i, j} = \sum_{p=0}^{P_i -1} \sum_{q=0}^{Q_i -1} \sum_{r=0}^{R_i -1} w_{ij}^{pqr} v_{(i-1)}^{(x+p)(y+q)(z+r)}\]
+
+<p>With a convolution kernel of dimension \(R_i\) in the z-dimension.</p>
+
+<p>The idea of 3D convolution is key as it allows direct learning of features from the time(z) dimension vie convolution which enforces locality and, with deeper layers, allows longer-range interactions. This idea has spawned many architectures such as <a href="https://arxiv.org/abs/1412.0767">C3D</a>, <a href="https://arxiv.org/abs/1412.0767">I3D</a> (which directly expands a 2D CNN, two-stream architecture into a two-stream 3D architecture) as well as more recent architectures such as (very interesting) <a href="https://arxiv.org/abs/1412.0767">SlowFast</a> and <a href="https://arxiv.org/abs/2004.04730">X3D</a>. 3D convolution architectures, unlike their CNN-LSTM counterparts, take as input a clip made of a fixed number of frames e.g. a 16 frame clip consists of 16 frames in order and convolution is performed directly on these.</p>
+
+<p>The obvious disadvantage of 3D convolution compared to 2D convolution is the increase in parameters – the weight tensors go from being ‘flat’ and two-dimensional to 3D weight cubes. This increases parameters and training hardware requirements (as more gradients etc. must be stored) is easier to overfit. Some approaches to enable convolution in the temporal dimension while also minimising the number propose separating the spatial and temporal convolutions with the idea that separable spatial and temporal convolution can approximate a full, single unified convolution. <a href="https://arxiv.org/abs/1711.11248">R(2+1)D</a> is one design that extends ResNet, adding explicit temporal-only convolutions to each block.</p>
+
+<h3 id="just-for-fun-4d-convolution">Just for fun: 4D convolution</h3>
+
+<p>In 2020, <a href="https://arxiv.org/abs/2002.07442">Zhang et al.</a> published a paper that aims to overcome the limitations of 3D ConvNets – namely the limitation in the number of frames in a clip. The clip size is typically small, perhaps 16-32 frames, but, in the real world many videos can be much longer with Kinetics-400 videos typically 36-72 frames long. The authors of this paper propose splitting up a whole video into <em>action units</em>, \(A_i\), which are short clips that represent a portion of an action. Multiple action units extracted in-order from a video make up a video input \(V = {A_1, ..., A_U}\) where \(A_i \in C \times T \times H \times W\) for \(U\) action units in a video. The authors intuit that rather than using longer clips with 3D convolution, where finding long-term (temporal) relationships would require deeper networks, using 4D convolutions <em>across clips</em> would better model long-term interactions.</p>
+
+<p>Mathematically, 4D convolution is a straightforward extension of 3D convolution that adds another dimension of parameters to a weight matrix and requires one more sum over the fourth dimension.</p>
+
+<p>Zhang et al. implement 4D convolution using an I3D ResNet-18 base and add a 4D residual block. This is likely better understood with the figure below from their paper.</p>
+
+<p><img src="/assets/blog/tech_blog/2021/2021-A-Summary-of-Action-Recognition-So-Far/zhang_4d_conv_diagram.png" alt="V4D design, Zhang et al." class="mx-auto d-block" /> <em>Interaction variations. Source: <a href="https://arxiv.org/abs/2002.07442">V4D design, Zhang et al.</a></em></p>
+
+<p>Using 4D convolutions begs one question: if the aim is to model long term dependencies, then why not use a 3D CNN+LSTM combination? It at least makes an interesting comparison to convolution across clips. I haven’t yet come across a paper that does experiments with this combination on a dataset like Kinetics, although <a href="https://ieeexplore.ieee.org/document/8803395">You et al.</a> use this setup for a Video Quality Assessment task.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>We have run through some of the important papers in action recognition and have covered a variety of approaches to solving problems in this area. This is hardly an exhaustive list and a quick search for summaries yields papers that list key literature in chronological order.</p>
+
+<p>We have more or less stuck to exploring RGB video derivative modalities, but, there are other types of data that are available depending on the application. Another key part of action recognition is data; datasets have been getting bigger over the years and modern architecture evaluation is often performed with multiple datasets. Understanding the data is as important as understanding the model itself.</p>
+
+<p>Human action recognition is an active research area and new approaches consist of new designs, new ways of manipulating data as well as new components to eke yet more performance out of existing models. Some of the challenges in this field are background clutter, fast motion, occlusion, viewpoint changes and changes to illumination.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#tech">tech</a>
+          
+            <a href="/tags#machine learning">machine learning</a>
+          
+            <a href="/tags#computer vision">computer vision</a>
+          
+            <a href="/tags#deep learning">deep learning</a>
+          
+            <a href="/tags#action recognition">action recognition</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+    <a href="https://twitter.com/intent/tweet?text=A+Summary+of+Action+Recognition+So+Far&url=http%3A%2F%2Flocalhost%3A4000%2F2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far%2F"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fab fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2F2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2F2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/" data-toggle="tooltip" data-placement="top" title="Mathematical Investing 1 - Meandering with Markowitz">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="page-item next">
+          <a class="page-link" href="/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/" data-toggle="tooltip" data-placement="top" title="An Intro to Offline Reinforcement Learning">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+              
+  
+  
+  
+
+  
+
+
+
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:padmanaba.srinivasan16@imperial.ac.uk" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/dangerbot3pic" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/padmanaba-srinivasan-b67bb1137" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        Padmanaba Srinivasan
+        &nbsp;&bull;&nbsp;
+      
+      2024
+
+      
+
+      
+      </p>
+      <!-- Please don't remove this, keep my open source work credited :) -->
+      <p class="theme-by text-muted">
+        Theme by
+        <a href="https://beautifuljekyll.com">beautiful-jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+  
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/main.js"></script>
+    
+  
+
+
+
+
+
+
+  
+  </body>
+</html>
