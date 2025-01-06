@@ -1,11 +1,11 @@
-current directory: /Users/dangerbot3pic/Documents/GitHub/padmanabasrinivasan.github.io/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
-/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20250106-41498-8ym1s7.rb extconf.rb
+current directory: /Users/dangerbot3pic/Documents/GitHub/tmp/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20250106-51980-1b1bo0h.rb extconf.rb
 creating Makefile
 
-current directory: /Users/dangerbot3pic/Documents/GitHub/padmanabasrinivasan.github.io/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+current directory: /Users/dangerbot3pic/Documents/GitHub/tmp/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 make "DESTDIR=" clean
 
-current directory: /Users/dangerbot3pic/Documents/GitHub/padmanabasrinivasan.github.io/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+current directory: /Users/dangerbot3pic/Documents/GitHub/tmp/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 make "DESTDIR="
 compiling ruby_http_parser.c
 ruby_http_parser.c:323:22: warning: '(' and '{' tokens introducing statement expression appear in different macro expansion contexts [-Wcompound-token-split-by-macro]
@@ -463,6 +463,6 @@ compiling ryah_http_parser.c
 linking shared-object ruby_http_parser.bundle
 ld: warning: search path '/AppleInternal/Library/BuildRoots/b11baf73-9ee0-11ef-b7b4-7aebe1f78c73/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.Internal.sdk/usr/local/lib' not found
 
-current directory: /Users/dangerbot3pic/Documents/GitHub/padmanabasrinivasan.github.io/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+current directory: /Users/dangerbot3pic/Documents/GitHub/tmp/vendor-bundle/ruby/2.6.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20250106-41498-60czxi
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20250106-51980-39bw6x

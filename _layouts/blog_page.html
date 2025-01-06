@@ -6,25 +6,10 @@ layout: page
 
 {% assign posts = paginator.posts | default: site.posts %}
 
-{% if page.title == "Bonsai Blog" %}
-    {% assign blog_type = 'bonsai' %}
-{% endif %}
-{% if page.title == "Blog" %}
-    {% assign blog_type = 'tech' %}
-{% endif %}
-
-
 <div class="posts-list">
   {% for post in posts %}
 
-  {% assign valid_post = false %}
-  {% for tag in post.tags %}
-    {% if tag == blog_type %}
-      {% assign valid_post = true %}
-    {% endif %}
-  {% endfor %}
-
-  {% if valid_post %}
+  {% if true %}
   
   <article class="post-preview">
     <a href="{{ post.url | absolute_url }}">

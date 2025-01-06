@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2020 -->
-  <head>
-  <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Tag Index</title>
+  
+
+  
+
+  
+
+  <title>Tag Index | Padmanaba Srinivasan</title>
+
   
   
   <meta name="author" content="Padmanaba Srinivasan">
   
-  
-  
 
-  <link rel="alternate" type="application/rss+xml" title="Padmanaba Srinivasan - Computer Science PhD Student" href="http://localhost:4000/feed.xml">
+  <meta name="description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
 
   
 
-  <!-- Google tag (gtag.js) -->
+  
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXCLFK6EN9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-HXCLFK6EN9');
 </script>
+
+
+  
+
+  
+
+  
+
+  
+
 
   
     
@@ -40,7 +54,7 @@
 
     
       
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
     
@@ -60,60 +74,48 @@
     
       <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
     
-      <link rel="stylesheet" href="/assets/css/main.css">
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
     
   
 
   
 
   
-
-  <!-- Facebook OpenGraph tags -->
+  
   
 
   
-  <meta property="og:title" content="Tag Index">
-  
 
-   
+  
+  <meta property="og:site_name" content="Padmanaba Srinivasan">
+  <meta property="og:title" content="Tag Index | Padmanaba Srinivasan">
   <meta property="og:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
-  
 
+  
 
   
   <meta property="og:type" content="website">
-  
-
-  
   <meta property="og:url" content="http://localhost:4000/tags/">
   <link rel="canonical" href="http://localhost:4000/tags/">
   
-  
 
   
-  <meta property="og:image" content="http://localhost:4000/assets/img/park.jpg">
-  
-
-
-  <!-- Twitter summary cards -->
-  
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   
   <meta name="twitter:site" content="@">
   <meta name="twitter:creator" content="@">
 
-  
-  <meta name="twitter:title" content="Tag Index">
+  <meta property="twitter:title" content="Tag Index | Padmanaba Srinivasan">
+  <meta property="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
+
   
 
   
-  <meta name="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
+
+
   
 
   
-  <meta name="twitter:image" content="http://localhost:4000/assets/img/park.jpg">
-  
-
   
 
   
@@ -121,12 +123,11 @@
 </head>
 
 
-  <body>
-
-    
-
+<body>
   
-    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-custom "><a class="navbar-brand" href="http://localhost:4000/">Padmanaba Srinivasan</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Padmanaba Srinivasan</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -136,7 +137,7 @@
             <a class="nav-link" href="/cv/CV.pdf">CV</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/techblog">Blog</a>
+            <a class="nav-link" href="/blog">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en">Publications</a>
@@ -144,51 +145,48 @@
   </div>
 
   
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        <a href="http://localhost:4000/">
-          <img alt="Navbar avatar" class="avatar-img" src="/assets/img/park.jpg" />
-        </a>
-      </div>
-    </div>
+
   
 
 </nav>
 
 
-    <!-- TODO this file has become a mess, refactor it -->
 
 
 
-
+  
 
 
 
 <header class="header-section ">
-
-<div class="intro-header no-img">
+<div class="intro-header ">
+  
   <div class="container-md">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="page-heading">
           <h1>Tag Index</h1>
-      
-      
-      
+          
+          
+          
         </div>
       </div>
     </div>
   </div>
+  
+  
 </div>
+
+
+
 </header>
 
 
-
-
-
-<div class="container-md" role="main">
+<main class=" container-md ">
   <div class="row">
-    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
       <a href="#action recognition" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;action recognition&nbsp;(1)</a><a href="#computer vision" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;computer vision&nbsp;(1)</a><a href="#deep learning" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;deep learning&nbsp;(1)</a><a href="#investing" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;investing&nbsp;(1)</a><a href="#machine learning" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;machine learning&nbsp;(8)</a><a href="#quantitative finance" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;quantitative finance&nbsp;(3)</a><a href="#reinforcement learning" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;reinforcement learning&nbsp;(5)</a><a href="#tech" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;tech&nbsp;(10)</a><a href="#trading strategies" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;trading strategies&nbsp;(2)</a><div id="full-tags-list"><h2 id="action recognition" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
         &nbsp;action recognition&nbsp;(1)
@@ -196,7 +194,7 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">A Summary of Action Recognition So Far</a>
                 <div class="entry-date">
-                    <time datetime="2021-06-16T00:00:00+01:00">16 June, 2021</time>
+                    <time datetime="2021-06-16T00:00:00-04:00">June 16, 2021</time>
                 </div>
             </div></div><h2 id="computer vision" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -205,7 +203,7 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">A Summary of Action Recognition So Far</a>
                 <div class="entry-date">
-                    <time datetime="2021-06-16T00:00:00+01:00">16 June, 2021</time>
+                    <time datetime="2021-06-16T00:00:00-04:00">June 16, 2021</time>
                 </div>
             </div></div><h2 id="deep learning" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -214,7 +212,7 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">A Summary of Action Recognition So Far</a>
                 <div class="entry-date">
-                    <time datetime="2021-06-16T00:00:00+01:00">16 June, 2021</time>
+                    <time datetime="2021-06-16T00:00:00-04:00">June 16, 2021</time>
                 </div>
             </div></div><h2 id="investing" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -223,7 +221,7 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/">Mathematical Investing 1 - Meandering with Markowitz</a>
                 <div class="entry-date">
-                    <time datetime="2020-09-22T00:00:00+01:00">22 September, 2020</time>
+                    <time datetime="2020-09-22T00:00:00-04:00">September 22, 2020</time>
                 </div>
             </div></div><h2 id="machine learning" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -232,42 +230,42 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/">Thoughts on DPO and Offline RL</a>
                 <div class="entry-date">
-                    <time datetime="2024-06-22T00:00:00+01:00">22 June, 2024</time>
+                    <time datetime="2024-06-22T00:00:00-04:00">June 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-Some-Interesting-Offline-RL-Methods-Early-2024/">Some Interesting Offline RL Methods (Early 2024)</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-An-Introduction-to-Preference-Based-RL/">An Introduction to Preference-Based RL</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-A-Overview-of-Model-Based-Offline-RL/">An Overview of Model-Based Offline RL Methods</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/">An Intro to Offline Reinforcement Learning</a>
                 <div class="entry-date">
-                    <time datetime="2023-12-15T00:00:00+00:00">15 December, 2023</time>
+                    <time datetime="2023-12-15T00:00:00-05:00">December 15, 2023</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">A Summary of Action Recognition So Far</a>
                 <div class="entry-date">
-                    <time datetime="2021-06-16T00:00:00+01:00">16 June, 2021</time>
+                    <time datetime="2021-06-16T00:00:00-04:00">June 16, 2021</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/">Starting out with Gaussian Processes</a>
                 <div class="entry-date">
-                    <time datetime="2020-08-25T00:00:00+01:00">25 August, 2020</time>
+                    <time datetime="2020-08-25T00:00:00-04:00">August 25, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-07-09-tech-blog-A-Simple-Trading-Strategy/">A Simple Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-07-09T00:00:00+01:00">09 July, 2020</time>
+                    <time datetime="2020-07-09T00:00:00-04:00">July 9, 2020</time>
                 </div>
             </div></div><h2 id="quantitative finance" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -276,17 +274,17 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/">Mathematical Investing 1 - Meandering with Markowitz</a>
                 <div class="entry-date">
-                    <time datetime="2020-09-22T00:00:00+01:00">22 September, 2020</time>
+                    <time datetime="2020-09-22T00:00:00-04:00">September 22, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/">Relative (Cross-Sectional) Momentum Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-09-01T00:00:00+01:00">01 September, 2020</time>
+                    <time datetime="2020-09-01T00:00:00-04:00">September 1, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-07-09-tech-blog-A-Simple-Trading-Strategy/">A Simple Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-07-09T00:00:00+01:00">09 July, 2020</time>
+                    <time datetime="2020-07-09T00:00:00-04:00">July 9, 2020</time>
                 </div>
             </div></div><h2 id="reinforcement learning" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -295,27 +293,27 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/">Thoughts on DPO and Offline RL</a>
                 <div class="entry-date">
-                    <time datetime="2024-06-22T00:00:00+01:00">22 June, 2024</time>
+                    <time datetime="2024-06-22T00:00:00-04:00">June 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-Some-Interesting-Offline-RL-Methods-Early-2024/">Some Interesting Offline RL Methods (Early 2024)</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-An-Introduction-to-Preference-Based-RL/">An Introduction to Preference-Based RL</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-A-Overview-of-Model-Based-Offline-RL/">An Overview of Model-Based Offline RL Methods</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/">An Intro to Offline Reinforcement Learning</a>
                 <div class="entry-date">
-                    <time datetime="2023-12-15T00:00:00+00:00">15 December, 2023</time>
+                    <time datetime="2023-12-15T00:00:00-05:00">December 15, 2023</time>
                 </div>
             </div></div><h2 id="tech" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -324,52 +322,52 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/">Thoughts on DPO and Offline RL</a>
                 <div class="entry-date">
-                    <time datetime="2024-06-22T00:00:00+01:00">22 June, 2024</time>
+                    <time datetime="2024-06-22T00:00:00-04:00">June 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-Some-Interesting-Offline-RL-Methods-Early-2024/">Some Interesting Offline RL Methods (Early 2024)</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-An-Introduction-to-Preference-Based-RL/">An Introduction to Preference-Based RL</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2024-02-22-tech-blog-A-Overview-of-Model-Based-Offline-RL/">An Overview of Model-Based Offline RL Methods</a>
                 <div class="entry-date">
-                    <time datetime="2024-02-22T00:00:00+00:00">22 February, 2024</time>
+                    <time datetime="2024-02-22T00:00:00-05:00">February 22, 2024</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/">An Intro to Offline Reinforcement Learning</a>
                 <div class="entry-date">
-                    <time datetime="2023-12-15T00:00:00+00:00">15 December, 2023</time>
+                    <time datetime="2023-12-15T00:00:00-05:00">December 15, 2023</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/">A Summary of Action Recognition So Far</a>
                 <div class="entry-date">
-                    <time datetime="2021-06-16T00:00:00+01:00">16 June, 2021</time>
+                    <time datetime="2021-06-16T00:00:00-04:00">June 16, 2021</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/">Mathematical Investing 1 - Meandering with Markowitz</a>
                 <div class="entry-date">
-                    <time datetime="2020-09-22T00:00:00+01:00">22 September, 2020</time>
+                    <time datetime="2020-09-22T00:00:00-04:00">September 22, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/">Relative (Cross-Sectional) Momentum Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-09-01T00:00:00+01:00">01 September, 2020</time>
+                    <time datetime="2020-09-01T00:00:00-04:00">September 1, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/">Starting out with Gaussian Processes</a>
                 <div class="entry-date">
-                    <time datetime="2020-08-25T00:00:00+01:00">25 August, 2020</time>
+                    <time datetime="2020-08-25T00:00:00-04:00">August 25, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-07-09-tech-blog-A-Simple-Trading-Strategy/">A Simple Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-07-09T00:00:00+01:00">09 July, 2020</time>
+                    <time datetime="2020-07-09T00:00:00-04:00">July 9, 2020</time>
                 </div>
             </div></div><h2 id="trading strategies" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
@@ -378,26 +376,31 @@
     <div class="post-list"><div class="tag-entry">
                 <a href="/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/">Relative (Cross-Sectional) Momentum Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-09-01T00:00:00+01:00">01 September, 2020</time>
+                    <time datetime="2020-09-01T00:00:00-04:00">September 1, 2020</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-07-09-tech-blog-A-Simple-Trading-Strategy/">A Simple Trading Strategy</a>
                 <div class="entry-date">
-                    <time datetime="2020-07-09T00:00:00+01:00">09 July, 2020</time>
+                    <time datetime="2020-07-09T00:00:00-04:00">July 9, 2020</time>
                 </div>
             </div></div></div>
 
+
       
+
+      
+
     </div>
   </div>
-</div>
+</main>
 
 
-    <footer>
+  <footer>
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
     <a href="mailto:padmanaba.srinivasan16@imperial.ac.uk" title="Email me">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
@@ -414,7 +417,7 @@
       <span class="sr-only">GitHub</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://linkedin.com/in/padmanaba-srinivasan-b67bb1137" title="LinkedIn">
+    <a href="https://linkedin.com/in/padmanaba-srinivasan" title="LinkedIn">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -422,14 +425,15 @@
       <span class="sr-only">LinkedIn</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en" title="Google Scholar">
+    <a href="https://scholar.google.com/citations?user=citations?user=_yyqhBEAAAAJ&hl=en" title="Google Scholar">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
       </span>
       <span class="sr-only">Google Scholar</span>
-   </a>
+    </a>
   </li></ul>
+
 
       
       <p class="copyright text-muted">
@@ -440,24 +444,31 @@
       2025
 
       
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">padmanabasrinivasan.github.io</a>
+        </span>
+      
 
       
+
+      
+
       </p>
-      <!-- Please don't remove this, keep my open source work credited :) -->
       <p class="theme-by text-muted">
-        Theme by
-        <a href="https://beautifuljekyll.com">beautiful-jekyll</a>
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
       </p>
       </div>
     </div>
   </div>
 </footer>
 
+
+  
   
     
-  
-    
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 
   
@@ -477,7 +488,7 @@
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-      <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/beautifuljekyll.js"></script>
     
   
 
@@ -486,6 +497,8 @@
 
 
 
-  
-  </body>
+
+
+
+</body>
 </html>

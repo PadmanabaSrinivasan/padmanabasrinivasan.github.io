@@ -1,0 +1,132 @@
+[ 
+ 
+{ 
+"title"    : "Thoughts on DPO and Offline RL", 
+"desc"     : "Thoughts on DPO and Offline RL", 
+"category" : "tech, machine learning, reinforcement learning", 
+"url"      : "/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/", 
+"date"     : "June 22, 2024" 
+}, 
+ 
+{ 
+"title"    : "Some Interesting Offline RL Methods (Early 2024)", 
+"desc"     : "Some Interesting Offline RL Methods (Early 2024)", 
+"category" : "tech, machine learning, reinforcement learning", 
+"url"      : "/2024-02-22-tech-blog-Some-Interesting-Offline-RL-Methods-Early-2024/", 
+"date"     : "February 22, 2024" 
+}, 
+ 
+{ 
+"title"    : "An Introduction to Preference-Based RL", 
+"desc"     : "An Introduction to Preference-Based RL", 
+"category" : "tech, machine learning, reinforcement learning", 
+"url"      : "/2024-02-22-tech-blog-An-Introduction-to-Preference-Based-RL/", 
+"date"     : "February 22, 2024" 
+}, 
+ 
+{ 
+"title"    : "An Overview of Model-Based Offline RL Methods", 
+"desc"     : "An Overview of Model-Based Offline RL Methods", 
+"category" : "tech, machine learning, reinforcement learning", 
+"url"      : "/2024-02-22-tech-blog-A-Overview-of-Model-Based-Offline-RL/", 
+"date"     : "February 22, 2024" 
+}, 
+ 
+{ 
+"title"    : "An Intro to Offline Reinforcement Learning", 
+"desc"     : "An Intro to Offline Reinforcement Learning", 
+"category" : "tech, machine learning, reinforcement learning", 
+"url"      : "/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/", 
+"date"     : "December 15, 2023" 
+}, 
+ 
+{ 
+"title"    : "A Summary of Action Recognition So Far", 
+"desc"     : "A Summary of Action Recognition So Far", 
+"category" : "tech, machine learning, computer vision, deep learning, action recognition", 
+"url"      : "/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/", 
+"date"     : "June 16, 2021" 
+}, 
+ 
+{ 
+"title"    : "Mathematical Investing 1 - Meandering with Markowitz", 
+"desc"     : "Mathematical Investing 1 - Meandering with Markowitz", 
+"category" : "tech, quantitative finance, investing", 
+"url"      : "/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/", 
+"date"     : "September 22, 2020" 
+}, 
+ 
+{ 
+"title"    : "Relative (Cross-Sectional) Momentum Trading Strategy", 
+"desc"     : "Relative (Cross-Sectional) Momentum Trading Strategy", 
+"category" : "tech, quantitative finance, trading strategies", 
+"url"      : "/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/", 
+"date"     : "September  1, 2020" 
+}, 
+ 
+{ 
+"title"    : "Starting out with Gaussian Processes", 
+"desc"     : "Starting out with Gaussian Processes", 
+"category" : "tech, machine learning", 
+"url"      : "/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/", 
+"date"     : "August 25, 2020" 
+}, 
+ 
+{ 
+"title"    : "A Simple Trading Strategy", 
+"desc"     : "A Simple Trading Strategy", 
+"category" : "tech, machine learning, quantitative finance, trading strategies", 
+"url"      : "/2020-07-09-tech-blog-A-Simple-Trading-Strategy/", 
+"date"     : "July  9, 2020" 
+}, 
+ 
+ 
+{ 
+"title"    : "Blog", 
+"desc"     : "Blog", 
+"category" : "page", 
+"url"      : "/blog/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Blog", 
+"desc"     : "Blog", 
+"category" : "page", 
+"url"      : "/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Padmanaba Srinivasan", 
+"desc"     : "Padmanaba Srinivasan", 
+"category" : "page", 
+"url"      : "/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Posts", 
+"desc"     : "Posts", 
+"category" : "page", 
+"url"      : "/posts/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Tag Index", 
+"desc"     : "Tag Index", 
+"category" : "page", 
+"url"      : "/tags/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
+"title"    : "Blog", 
+"desc"     : "Blog", 
+"category" : "page", 
+"url"      : "/page2/", 
+"date"     : "January 1, 1970" 
+} 
+ 
+]

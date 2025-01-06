@@ -5,10 +5,9 @@
     <title>Padmanaba Srinivasan</title>
     
     
-    <description>Computer Science PhD Student</description>
-    
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
     
       <item>
         <title>Thoughts on DPO and Offline RL</title>
@@ -16,7 +15,7 @@
           
           Direct Preference Optimization is all the rage now in LLMs, and rightly so! The derivation is neat (and very familiar to those experienced with reinforcement learning) and allows direct, preference-based finetuning of regression-trained LLMs without having to learn a reward model. In this post, I want to explore what implications...
         </description>
-        <pubDate>Sat, 22 Jun 2024 00:00:00 +0100</pubDate>
+        <pubDate>Sat, 22 Jun 2024 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/</link>
         <guid isPermaLink="true">http://localhost:4000/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/</guid>
       </item>
@@ -27,7 +26,7 @@
           
           Intro Reinforcement Learning (RL) combined with deep learning has shown incredible promise in recent years: in 2016, AlphaGo was good enough to beat the best Go players; by 2017 AlphaGo Zero learned to play against itself and blew AlphaGo’s performance out of the water; and in 2019 MuZero mastered not...
         </description>
-        <pubDate>Thu, 22 Feb 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 22 Feb 2024 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2024-02-22-tech-blog-Some-Interesting-Offline-RL-Methods-Early-2024/</link>
         <guid isPermaLink="true">http://localhost:4000/2024-02-22-tech-blog-Some-Interesting-Offline-RL-Methods-Early-2024/</guid>
       </item>
@@ -38,7 +37,7 @@
           
           Intro In Reinforcement Learning (RL), an agent navigates through an environment and learns to maximize a discounted sum of scalar rewards produced as a property of the environment. In practice, however, no environment decides to provide a reward signal – such signals are the product of human design. At its...
         </description>
-        <pubDate>Thu, 22 Feb 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 22 Feb 2024 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2024-02-22-tech-blog-An-Introduction-to-Preference-Based-RL/</link>
         <guid isPermaLink="true">http://localhost:4000/2024-02-22-tech-blog-An-Introduction-to-Preference-Based-RL/</guid>
       </item>
@@ -49,7 +48,7 @@
           
           Intro Model-Free vs Model-Based RL In Reinforcement Learning (RL) tasks, an agent interacts with an environment by executing an action, a, given the current state, s and transitions to the next state s’ defined by the environment. The environment yields a scalar reward r at transition which, with successive interaction,...
         </description>
-        <pubDate>Thu, 22 Feb 2024 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 22 Feb 2024 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2024-02-22-tech-blog-A-Overview-of-Model-Based-Offline-RL/</link>
         <guid isPermaLink="true">http://localhost:4000/2024-02-22-tech-blog-A-Overview-of-Model-Based-Offline-RL/</guid>
       </item>
@@ -60,7 +59,7 @@
           
           What is Reinforcement Learning? Say you have bought a table from a certain Swedish retailer famous for both their fairly priced furnite, and meatballs, but have lost the instructions to assemble it. A trivial, albeit cumbersome approach would be to just try putting different parts together and to make it...
         </description>
-        <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 15 Dec 2023 00:00:00 -0500</pubDate>
         <link>http://localhost:4000/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/</link>
         <guid isPermaLink="true">http://localhost:4000/2023-12-15-tech-blog-An-Intro-to-Offline-Reinforcement-Learning/</guid>
       </item>
@@ -71,7 +70,7 @@
           
           This will be a post that is updated as I read and learn more about this topic. It is intended as a space where I can write and summarise what I think is the key material I’ve come across. Action recognition is a huge field and this page alone is...
         </description>
-        <pubDate>Wed, 16 Jun 2021 00:00:00 +0100</pubDate>
+        <pubDate>Wed, 16 Jun 2021 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/</link>
         <guid isPermaLink="true">http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/</guid>
       </item>
@@ -82,7 +81,7 @@
           Using Linear Algebra to choose the best investments - 
           This post, and indeed the successive posts in this series are focused on portfolio optimisation. Harry Markowitz is credited with developing the field of Modern Portfolio Theory, and won the Nobel Prize in Economics for developing the Markowitz Model (Minimum-Variance). Understanding Return and Risk When we look at an investment...
         </description>
-        <pubDate>Tue, 22 Sep 2020 00:00:00 +0100</pubDate>
+        <pubDate>Tue, 22 Sep 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/</link>
         <guid isPermaLink="true">http://localhost:4000/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/</guid>
       </item>
@@ -93,7 +92,7 @@
           Don't Stop Me Now - 
           Another day, another post. This time it’s all about Momentum. Momentum is, as defined in the Oxford English Dictionary: The ability to keep increasing or developing A force that is gained by movement (specialist) The quantity of movement of a moving object, measured as its mass multiplied by its speed....
         </description>
-        <pubDate>Tue, 01 Sep 2020 00:00:00 +0100</pubDate>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/</link>
         <guid isPermaLink="true">http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/</guid>
       </item>
@@ -104,7 +103,7 @@
           A Gaussian Process Primer - 
           After taking the course, Mathematics for Machine Learning (MML), at university and reading the excellent book of the same name, I was well and truly hooked on Gaussian Processes. The MML book introduces the idea of applying the full Bayesian treatment to Linear Regression, leading to the simple and beautiful...
         </description>
-        <pubDate>Tue, 25 Aug 2020 00:00:00 +0100</pubDate>
+        <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/</link>
         <guid isPermaLink="true">http://localhost:4000/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/</guid>
       </item>
@@ -115,7 +114,7 @@
           Setting the scene for Machine Learning in Quantitative Finance - 
           We have all heard of Warren Buffet. The Oracle of Omaha, as of 2019, has achieved an average annual return of 20.5%. This far beats the average inflation rate of 9.95% per year since 1965. Compound interest means that $1 invested in 1965 is now worth over $23,000! This begs...
         </description>
-        <pubDate>Thu, 09 Jul 2020 00:00:00 +0100</pubDate>
+        <pubDate>Thu, 09 Jul 2020 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2020-07-09-tech-blog-A-Simple-Trading-Strategy/</link>
         <guid isPermaLink="true">http://localhost:4000/2020-07-09-tech-blog-A-Simple-Trading-Strategy/</guid>
       </item>
