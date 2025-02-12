@@ -68,55 +68,55 @@
         <title>A Summary of Action Recognition So Far</title>
         <description>
           
-          This will be a post that is updated as I read and learn more about this topic. It is intended as a space where I can write and summarise what I think is the key material I’ve come across. Action recognition is a huge field and this page alone is...
+          *This will be a post that is updated as I read and learn more about this topic. It is intended as a space where I can write and summarise what I think is the key material I've come across. Action recognition is a huge field and this page alone is...
         </description>
         <pubDate>Wed, 16 Jun 2021 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far/</guid>
+        <link>http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far.md/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021-06-16-tech-blog-A-Summary-of-Action-Recognition-So-Far.md/</guid>
       </item>
     
       <item>
         <title>Mathematical Investing 1 - Meandering with Markowitz</title>
         <description>
           Using Linear Algebra to choose the best investments - 
-          This post, and indeed the successive posts in this series are focused on portfolio optimisation. Harry Markowitz is credited with developing the field of Modern Portfolio Theory, and won the Nobel Prize in Economics for developing the Markowitz Model (Minimum-Variance). Understanding Return and Risk When we look at an investment...
+          This post, and indeed the successive posts in this series are focused on portfolio optimisation. [Harry Markowitz](https://en.wikipedia.org/wiki/Harry_Markowitz) is credited with developing the field of [Modern Portfolio Theory](https://en.wikipedia.org/wiki/Modern_portfolio_theory), and won the Nobel Prize in Economics for developing the Markowitz Model (Minimum-Variance). ### Understanding Return and Risk When we look at an...
         </description>
         <pubDate>Tue, 22 Sep 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz/</guid>
+        <link>http://localhost:4000/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz.md/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-09-22-tech-blog-Mathematical-Investing-1-Meandering-with-Markowitz.md/</guid>
       </item>
     
       <item>
         <title>Relative (Cross-Sectional) Momentum Trading Strategy</title>
         <description>
           Don't Stop Me Now - 
-          Another day, another post. This time it’s all about Momentum. Momentum is, as defined in the Oxford English Dictionary: The ability to keep increasing or developing A force that is gained by movement (specialist) The quantity of movement of a moving object, measured as its mass multiplied by its speed....
+          Another day, another post. This time it's all about Momentum. Momentum is, as defined in the [Oxford English Dictionary](https://www.oxfordlearnersdictionaries.com/definition/english/momentum?q=momentum): 1. The ability to keep increasing or developing 2. A force that is gained by movement 3. (specialist) The quantity of movement of a moving object, measured as its mass multiplied...
         </description>
         <pubDate>Tue, 01 Sep 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy/</guid>
+        <link>http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy.md/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-09-01-tech-blog-Relative-Momentum-Trading-Strategy.md/</guid>
       </item>
     
       <item>
         <title>Starting out with Gaussian Processes</title>
         <description>
           A Gaussian Process Primer - 
-          After taking the course, Mathematics for Machine Learning (MML), at university and reading the excellent book of the same name, I was well and truly hooked on Gaussian Processes. The MML book introduces the idea of applying the full Bayesian treatment to Linear Regression, leading to the simple and beautiful...
+          After taking the course, Mathematics for Machine Learning (MML), at university and reading the excellent book of the [same name](https://mml-book.com/), I was well and truly hooked on Gaussian Processes. The [MML](https://mml-book.com/) book introduces the idea of applying the full Bayesian treatment to Linear Regression, leading to the simple and beautiful...
         </description>
         <pubDate>Tue, 25 Aug 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes/</guid>
+        <link>http://localhost:4000/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes.md/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-08-25-tech-blog-Starting-out-with-Gaussian-Processes.md/</guid>
       </item>
     
       <item>
         <title>A Simple Trading Strategy</title>
         <description>
           Setting the scene for Machine Learning in Quantitative Finance - 
-          We have all heard of Warren Buffet. The Oracle of Omaha, as of 2019, has achieved an average annual return of 20.5%. This far beats the average inflation rate of 9.95% per year since 1965. Compound interest means that $1 invested in 1965 is now worth over $23,000! This begs...
+          We have all heard of Warren Buffet. The **Oracle of Omaha**, as of 2019, has achieved an average annual return of 20.5%. This far beats the average inflation rate of 9.95% per year since 1965. Compound interest means that $1 invested in 1965 is now worth over $23,000! This begs...
         </description>
         <pubDate>Thu, 09 Jul 2020 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/2020-07-09-tech-blog-A-Simple-Trading-Strategy/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020-07-09-tech-blog-A-Simple-Trading-Strategy/</guid>
+        <link>http://localhost:4000/2020-07-09-tech-blog-A-Simple-Trading-Strategy.md/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-07-09-tech-blog-A-Simple-Trading-Strategy.md/</guid>
       </item>
     
   </channel>
