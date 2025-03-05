@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Intuition Explained: Behavioral Supervisor Tuning | Padmanaba Srinivasan</title>
+
+  
+  
+  <meta name="author" content="Padmanaba Srinivasan">
+  
+
+  <meta name="description" content="Conferences confine a paper to be at most X pages in length, where X is usually 7-10 pages. The need to communicate most of the important (theoretical and experimental) parts of my work in such a format means making sacrifices - this often ends in me removing text that aims...">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Padmanaba Srinivasan">
+  <meta property="og:title" content="Intuition Explained: Behavioral Supervisor Tuning | Padmanaba Srinivasan">
+  <meta property="og:description" content="Conferences confine a paper to be at most X pages in length, where X is usually 7-10 pages. The need to communicate most of the important (theoretical and experimental) parts of my work in such a format means making sacrifices - this often ends in me removing text that aims...">
+
+  
+  <meta property="og:image" content="http://localhost:4000/assets/img/path.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="og:article:author" content="Padmanaba Srinivasan">
+  
+  <meta property="og:article:published_time" content="2025-03-05T00:00:00-05:00">
+  <meta property="og:url" content="http://localhost:4000/2025-03-05-tech-blog-Behavioral-Supervisor-Tuning/">
+  <link rel="canonical" href="http://localhost:4000/2025-03-05-tech-blog-Behavioral-Supervisor-Tuning/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Intuition Explained: Behavioral Supervisor Tuning | Padmanaba Srinivasan">
+  <meta property="twitter:description" content="Conferences confine a paper to be at most X pages in length, where X is usually 7-10 pages. The need to communicate most of the important (theoretical and experimental) parts of my work in such a format means making sacrifices - this often ends in me removing text that aims...">
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/assets/img/path.jpg">
+  
+
+  
+
+
+  
+
+  
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">Padmanaba Srinivasan</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/cv/CV.pdf">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://scholar.google.com/citations?user=_yyqhBEAAAAJ&hl=en">Publications</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+
+
+
+  
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+    
+    
+    
+      data-img-src-1="http://localhost:4000/assets/img/path.jpg"
+    
+    
+    
+  ></div>
+
+
+<header class="header-section has-img">
+<div class="intro-header  big-img ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Intuition Explained: Behavioral Supervisor Tuning</h1>
+          
+          
+           
+            
+            <span class="post-meta">Posted on March 5, 2025</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <span class='img-desc'></span>
+</div>
+
+
+
+</header>
+
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+
+      
+
+      <div class="blog-post">
+        <p>Conferences confine a paper to be at most <strong>X</strong> pages in length, where <strong>X</strong> is usually 7-10 pages. The need to communicate most of the important (theoretical and experimental) parts of my work in such a format means making sacrifices - this often ends in me removing text that aims to build intuitive reasoning behind the work.</p>
+
+<p>While this is fine for reviewers, who are usually knowledgeable about the research area, a researcher working in an adjacent field may find the <em>why</em> behind the paper immediately inaccessible. I have experienced this first-person at conference presentations/posters where I get some quizzical glances as I try to explain where my research fits into and solves a problem.</p>
+
+<p>In this post, I will try to explain the intuition behind one of my own papers. I hope to expand this to a series of posts where each post tackles a paper.</p>
+
+<h1 id="offline-reinforcement-learning">Offline Reinforcement Learning</h1>
+
+<p>Reinforcement learning (RL) formulates a decision-making process as a Markov decision process (MDP). There is plenty of literature out there that describes MDPs in better detail, such as <a href="http://incompleteideas.net/book/the-book-2nd.html">Sutton and Barto</a>.</p>
+
+<p>Deep neural networks can extend RL to more interesting/challenging/realistic domains by <a href="https://arxiv.org/abs/1312.5602">replacing exact state-value tables with function approximators</a>. Expanding the action space to infinity enables continuous control, but poses <a href="https://arxiv.org/abs/1509.02971">additional challenges</a>. Also, as the state/action space grows, the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of dimensionality</a> means that function approximators increasingly extrapolate rather than interpolate and exponentially more data is needed for training.</p>
+
+<p>This makes online RL methods hungry for more data. The offline RL paradigm aims to learn from static datasets that consist of pre-collected trajectories produced by some unknown (mixture of) behavior policies. In addition to being unknown, the behavior policy (\(\pi_\beta\)) is potentially suboptimal and offline RL methods aim to learn an optimal policy (or as near to one as possible) while addressing the problem of distribution shift and <a href="https://arxiv.org/abs/1812.02900">extrapolation error</a>.</p>
+
+<h1 id="the-problem">The Problem</h1>
+
+<p>The minimalist approach to offline RL, called <a href="https://arxiv.org/abs/2106.06860">TD3+BC</a> adds a behavioral cloning constraint to the standard TD3 algorithm:</p>
+
+\[\pi^* = argmax_{\pi} \mathbb{E}_{s, a \sim \mathcal{D}} [Q(s, \pi(s)) - \lambda (\pi(s) - a)^2 ].\]
+
+<p>This is simple and the results in the paper show excellent results with a relatively simple constraint.</p>
+
+<p>Unfortunately, this objective is deceptively simple. This constraint is a forward KL divergence which seeks to spread the probability mass of the policy over the entire reference distribution (see <a href="https://dibyaghosh.com/blog/probability/kldivergence.html">this blog</a> for an awesome explanation). The reverse KL divergence is <strong>mode-seeking</strong> and will allow the policy to select a single mode, which keeps the mean of the learned policy in-distribution. I illustrate this in the figure below (image adapted from https://www.tuananhle.co.uk/notes/reverse-forward-kl.html).</p>
+
+<p><img src="/images/2025/behavioral_supervisor_tuning/reverse_forward_kl.png" alt="Forward vs Reverse KL" title="Forward vs Reverse KL" /></p>
+
+<p>Incorporating the reverse KL has already been <a href="https://dl.acm.org/doi/10.1145/1273496.1273590">solved</a> to yield a weighted behavioral cloning (weighted BC) policy objective. The problem with this objective is the need to tune the exponential advantage coefficient, which can explode for large advantage values, leading to instability. There is <a href="https://openreview.net/forum?id=mn1MWh0iDCA">empirical evidence</a> that weighted BC is too restrictive compared to a more TD3+BC-style objective. These findings are echoed more <a href="https://arxiv.org/abs/2406.09329?">recently</a> where a separate BC constraint usually outperforms weighted BC.</p>
+
+<p>So the goal behind this paper is as follows: can we design a constraint that:</p>
+<ol>
+  <li>Separates the constraint i.e. not weighted BC</li>
+  <li>Easy to tune</li>
+  <li>Supports multimodal behavior policies</li>
+</ol>
+
+<h1 id="the-solution">The Solution</h1>
+
+<p>In this paper, we introduce <a href="https://arxiv.org/abs/2404.16399">behavioral supervisor tuning</a> as a solution to the problem with TD3+BC.</p>
+
+<h2 id="part-1-uncertainty-estimation">Part 1: Uncertainty Estimation</h2>
+
+<p>Learning which actions are in-distribution or permissible from arbitrary datasets means learning a flexible model that has no priors wrt. the number of modes (e.g. mixture density nets) and does not require sampling (VAEs). I came across the <a href="https://arxiv.org/abs/2307.00667">Morse neural network</a> which learns an uncertainty model over a dataset without the need to know modality beforehand.</p>
+
+<p>Why this particular model?</p>
+
+<p>Convenience. I had already played around with it before starting work on this project and had a ready-running implementation to experiment with when working on this problem. Any other uncertainty estimation could be used: randomly initialized ensembles and alternative uncertainty estimators are all good replacement uncertainty estimators. One of the most attractive properties of the Morse neural net is that uncertainties can be bounded in \(0 \leq uncertainty \leq 1\), which offers stability benefits in the next portion of this method.</p>
+
+<p>Below is a plot of the Morse density on a toy dataset. Note that this plots \(certainty = 1 - uncertainty\).</p>
+
+<p float="center">
+  <img src="/images/2025/behavioral_supervisor_tuning/four_modes.png" width="25%" />
+  <img src="/images/2025/behavioral_supervisor_tuning/four_modes_t=1.png" width="25%" /> 
+  <img src="/images/2025/behavioral_supervisor_tuning/four_modes_3d_density.png" width="25%" />
+</p>
+
+<h2 id="part-2-stable-reverse-kl-constraint">Part 2: Stable Reverse KL Constraint</h2>
+
+<p>Now we return to the basic BC constraint:</p>
+
+\[\pi_{BC} = argmin_\pi \mathbb{E}_{s, a \sim \mathcal{D}} [(\pi(s) - a)^2],\]
+
+<p>whose forward KL poses a problem when the underlying behavior policy is not unimodal. Instead, look at the uncertainty-minimizing constrained problem:</p>
+
+\[\pi_{BC} = argmin_\pi \mathbb{E}_{s, a \sim \mathcal{D}} [C^\pi(s, a) + \mu(\pi(s) - a)],\]
+
+<p>which minimizes uncertainty (\(C^\pi(s, a)\), I’ll get to what exactly this term is in a bit) and BC error.</p>
+
+<p>At a glance, this objective does not make sense: surely minimizing uncertainty is equivalent to minimizing BC?</p>
+
+<p>Well, nearly. They are equivalent when the behavior policy is unimodal, but, in a mixture behavior policy dataset, uncertainty minimization is mode-seeking.</p>
+
+<p>This is still an ugly problem, but using the trickery behind weighted BC, we can obtain a cleaner policy objective:</p>
+
+\[argmin_\pi \mathbb{E}_{s, a \sim \mathcal{D}} [ (\pi(s) - a)^2 e^{\frac{1}{\mu} C^{\pi}(s, a)}] \Longleftrightarrow argmin_\pi D_{KL} (\pi || \pi_\beta),\]
+
+<p>where the final equivalence is exact when training a stochastic policy with entropy regularization.</p>
+
+<p>In the paper, \(C^\pi(s, a) = certainty\) from the Morse net model. As certainty is bounded, the limits of the exponential certainty are \(1 \leq exp(certainty) \leq e^{1/\mu}\) and we can see this as a dynamic weight applied to the BC constraint: \(\omega(s, a) (\pi(s) - a)^2\). When the policy is out-of-distribution, \(\omega(s, a)\) is large leading to a strong pull towards an in-distribution action. In practice, we use \(\omega(s, a) = e^{\frac{1}{\mu} C^{\pi}(s, a)} - 1\) as this constraint coefficient must decay to zero for in-distribution actions (i.e. no pull when fully in distribution).</p>
+
+<p>Finally, we plug replace TD3+BC’s minimalist constraint with this new dynamic constraint:</p>
+
+\[\pi^* = argmax_{\pi} \mathbb{E}_{s, a \sim \mathcal{D}} [Q(s, \pi(s)) - \omega(s, a) (\pi(s) - a)^2 ].\]
+
+<h1 id="the-benefits">The Benefits</h1>
+
+<p>The paper evaluates the new constrained objective on various datasets and performs ablations. Advantages can be summarized as:</p>
+<ol>
+  <li>SOTA: TD3-BST performs extremely well, especially on the challenging Antmaze tasks which TD3+BC struggles in</li>
+  <li>Tuning: TD3-BST introduces two new hyperparameters, one more than TD3+BC, but retains the ease of tuning with hyperparameter values generalizing well across like tasks</li>
+  <li>Pluggable: Any weighted BC policy improvement objective can be replaced with BST and demonstrate better performance</li>
+</ol>
+
+<h1 id="the-drawbacks">The Drawbacks</h1>
+
+<p>Some drawbacks I see in practice are:</p>
+<ol>
+  <li>Morse network: this is yet another model to train, and as an empirical estimate of the behavior policy, is subject to estimation errors and will inevitably be sensitive to architecture, especially when moving beyond proprioceptive domains</li>
+  <li>Limited: this approach is designed using the properties of the Morse network in mind. Replacing the Morse net with almost any other uncertainty estimator will require careful tuning</li>
+  <li>Difficult to extend: in internal experiments, I tried and failed to apply BST to stochastic policies. For now, performance seems limited to deterministic policies - maybe someone with both compute and time may find it interesting to apply BST to <a href="https://arxiv.org/abs/1801.01290">SAC</a>.</li>
+</ol>
+
+      </div>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#tech">tech</a>
+          
+            <a href="/tags#machine learning">machine learning</a>
+          
+            <a href="/tags#reinforcement learning">reinforcement learning</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2024-06-22-tech-blog-Thoughts-On-DPO-and-Offline-RL/" data-toggle="tooltip" data-placement="top" title="Thoughts on DPO and Offline RL">
+            <i class="fas fa-arrow-left" alt="Previous Post"></i>
+            <span class="d-none d-sm-inline-block">Previous Post</span>
+          </a>
+        </li>
+        
+        
+      </ul>
+      
+  
+  
+  
+
+  
+
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:padmanaba.srinivasan16@imperial.ac.uk" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/dangerbot3pic" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/padmanaba-srinivasan" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=citations?user=_yyqhBEAAAAJ&hl=en" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        Padmanaba Srinivasan
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="http://localhost:4000/">padmanabasrinivasan.github.io</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
